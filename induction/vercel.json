@@ -1,0 +1,1 @@
+{"version":2,"rewrites":[{"source":"/induction","destination":"/index.html"},{"source":"/induction/","destination":"/index.html"},{"source":"/verify","destination":"/verify.html"}]}

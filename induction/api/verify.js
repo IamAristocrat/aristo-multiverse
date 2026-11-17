@@ -1,0 +1,1 @@
+import{verifyToken}from'../lib/tokens.js';export default function handler(req,res){res.setHeader('Cache-Control','private, no-store, max-age=0');if(req.method!=='GET')return res.status(405).json({error:'Method not allowed'});const token=typeof req.query.token==='string'?req.query.token:'';const r=verifyToken(token);return res.status(r.valid?200:400).json(r)}
