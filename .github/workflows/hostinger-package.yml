@@ -1,0 +1,27 @@
+name: Hostinger induction source package
+on:
+  push:
+    paths:
+      - 'induction/**'
+      - '.github/workflows/hostinger-package.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Package source
+        run: |
+          mkdir -p /tmp/induction-package
+          cp -R induction/. /tmp/induction-package/
+          cd /tmp/induction-package
+          zip -qr "$GITHUB_WORKSPACE/aristoverse-induction-source.zip" .
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: aristoverse-induction-source
+          path: aristoverse-induction-source.zip
+          retention-days: 14
