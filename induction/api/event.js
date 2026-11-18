@@ -1,1 +1,0 @@
-import{getEvent}from'../lib/event.js';export default function handler(req,res){res.setHeader('Cache-Control','private, no-store, max-age=0');if(req.method!=='GET')return res.status(405).json({error:'Method not allowed'});res.status(200).json(getEvent())}
