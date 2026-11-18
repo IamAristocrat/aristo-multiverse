@@ -1,6 +1,5 @@
 const venues={
-unconfirmed:{label:'Venue to be confirmed',address:'Sathyabama (OMR) and Anna University (Guindy) are tentative options.'},
-sathyabama:{label:'Aristocrat Startup Cell, Sathyabama',address:'Centre for Innovation and Technology Transfer, 3rd Floor, Advanced Studies Block, Sathyabama, Old Mahabalipuram Road, Chennai - 600119, Tamil Nadu, India.'},
+unconfirmed:{label:'Venue information temporarily unavailable',address:'Please check the official induction page for the current meeting location and campus entry instructions.'},
 annau:{label:'Aristoverse at iTNT Hub, Anna University',address:'3rd Floor, Sir C. V. Raman Block, Anna University Campus, Kotturpuram, Chennai - 600025, Tamil Nadu, India.'}
 };
 export function getEvent(now=new Date()){
